@@ -171,7 +171,7 @@ The S2AF framework has been applied to two comprehensive case studies demonstrat
    - Validate parametric constraints
    - Verify SLA compliance
    - Conduct quality gate reviews
-   
+
 ## Key Benefits
 
 - **Systematic completeness**: Grid structure ensures no architectural aspect is overlooked

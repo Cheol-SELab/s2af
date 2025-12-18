@@ -6,9 +6,9 @@
 
 ### Key Principles
 
-- **Domain-driven organization**: Five architectural domains (Strategy, Operational, Service, Resource, Project) capture different perspectives of the system
-- **Concern-based analysis**: Three analytical concerns (Static, Dynamic, Contracts) systematically address structural, behavioral, and constraint aspects
-- **SysML v2 alignment**: Native integration with SysML v2 artifacts (Definition, Structure, Activity, Interaction, State Machine, Data Definition, Parametric, Table)
+- **Domain-driven organization**: Five architectural domains (Strategy, Operational, Service, Resource, and Project) capture different perspectives of the system
+- **Concern-based analysis**: Three analytical concerns (Static, Dynamic, and Contracts) systematically address structural, behavioral, and constraint aspects
+- **SysML v2 alignment**: Native integration with SysML v2 artifacts (Definition, Structure, Activity, Interaction, State Machine, Data Definition, Parametric, and Table)
 - **End-to-end traceability**: Explicit links from capabilities through services to resources and project milestones
 - **Quality-driven**: Built-in verification, validation, and compliance mechanisms
 
@@ -27,55 +27,46 @@
 ### Three Analytical Concerns
 
 1. **Static (Definition/Structure)**: What exists and how it is organized
-   - Definitions, taxonomies, decompositions
-   - Structural relationships, ports, interfaces
+   - Definitions, taxonomies, and decompositions
+   - Structural relationships, ports, and interfaces
    - Type specifications and configurations
 
 2. **Dynamic (Activity/Interaction/State)**: How things behave and interact
-   - Activities, workflows, processes
-   - Interaction sequences, message flows
-   - State machines, mode transitions
+   - Activities, workflows, and processes
+   - Interaction sequences and message flows
+   - State machines and mode transitions
 
 3. **Contracts (Data/Parametric/Table)**: What is agreed upon and constrained
-   - Data definitions, schemas, protocols
-   - Parametric constraints, equations
-   - Tables, matrices, traceability links
+   - Data definitions, schemas, and protocols
+   - Parametric constraints and equations
+   - Tables, matrices, and traceability links
 
 ## Project Structure
 
 ```
 S2AF/
-├── README.md                 # This file - project overview and introduction
-├── docs/                     # Framework documentation (planned)
-│   ├── S2AF.md              # Framework methodology (planned)
-│   ├── S2AF_grid.md         # Grid structure details (planned)
-│   └── S2AF_process.md      # Application process guidance (planned)
-├── src/                      # SysML v2 framework definitions
-│   ├── s2af/                # Core S2AF type library
-│   │   ├── Level1BaseTypes.sysml           # Foundation types
-│   │   ├── Level2DomainTypes.sysml         # Domain-specific types
-│   │   ├── Level3ArchitectureTypes.sysml   # Architecture patterns
-│   │   └── S2AF_Grid.sysml                 # Grid structure definition
-│   └── utils/               # Utility scripts
-│       └── s2af_grid_render.py             # Grid visualization generator
-├── examples/                 # Case study implementations
-│   ├── mumt/                # Manned-Unmanned Teaming case study
-│   │   ├── S2AF_example_MUMT.md           # Case study documentation
-│   │   ├── mumt.sysml                      # SysML v2 model
-│   │   └── [Domain]_[Concern]/            # Generated diagrams per grid cell
-│   └── nghe/                # Next Generation Heavy Equipment case study
-│       ├── S2AF_example_NGHE.md           # Case study documentation
-│       ├── nghe.sysml                      # SysML v2 model
-│       └── [Domain]_[Concern]/            # Generated diagrams per grid cell
-└── out/                      # Generated outputs (grids, reports)
-    └── grids/               # HTML grid visualizations
-        ├── mumt/
-        └── nghe/
+├── README.md                               # This file - project overview and introduction
+├── src/                                    # SysML v2 framework definitions
+│   └── s2af/                               # Core S2AF type library
+│       ├── Level1BaseTypes.sysml           # Foundation types
+│       ├── Level2DomainTypes.sysml         # Domain-specific types
+│       ├── Level3ArchitectureTypes.sysml   # Architecture patterns
+│       └── S2AF_Grid.sysml                 # Grid structure definition
+└── examples/                               # Case study implementations
+    ├── mumt/                               # Manned-Unmanned Teaming case study
+    │   ├── S2AF_example_MUMT.md            # Case study documentation
+    │   ├── mumt.sysml                      # SysML v2 model
+    │   └── [Domain]_[Concern]/             # Generated diagrams per grid cell
+    └── nghe/                               # Next Generation Heavy Equipment case study
+        ├── S2AF_example_NGHE.md            # Case study documentation
+        ├── nghe.sysml                      # SysML v2 model
+        └── [Domain]_[Concern]/             # Generated diagrams per grid cell
+
 ```
 
 ## Case Studies
 
-The S2AF framework has been applied to two comprehensive case studies demonstrating its versatility across different domains—from military collaborative operations to autonomous construction equipment. Each case study systematically populates the 5×3 grid structure with SysML v2 artifacts, establishing end-to-end traceability from strategic capabilities to project milestones.
+The S2AF framework has been applied to two case studies demonstrating its versatility across different domains - from military collaborative operations to autonomous construction equipment. Each case study systematically populates the 5×3 grid structure with SysML v2 artifacts, establishing end-to-end traceability from strategic capabilities to project milestones.
 
 ### 1. MUMT — Manned-Unmanned Teaming
 
@@ -88,7 +79,7 @@ The S2AF framework has been applied to two comprehensive case studies demonstrat
 - C4: Survivability/Security Analysis
 
 **Key Features**:
-- Multi-platform coordination (manned aircraft, UAV/UCAV, UGV)
+- Multi-platform coordination (manned aircraft, UAV/UCAV, and UGV)
 - Real-time mission allocation with human-in-the-loop approval
 - Distributed cooperation planning and consensus protocols
 - Security assurance with encryption, key rotation, and anomaly detection
@@ -110,9 +101,9 @@ The S2AF framework has been applied to two comprehensive case studies demonstrat
 - C4: Safety Analysis
 
 **Key Features**:
-- Autonomous/teleoperated heavy equipment (excavators, loaders, dump trucks)
-- Performance optimization (cycle time, energy efficiency, productivity)
-- Multi-mode operation (Manual, Assist, Autonomous, Teleoperation, Safety Stop)
+- Autonomous/teleoperated heavy equipment (excavators, loaders, and dump trucks)
+- Performance optimization (cycle time, energy efficiency, and productivity)
+- Multi-mode operation (Manual, Assist, Autonomous, Teleoperation, and Safety Stop)
 - Safety-critical systems with E-Stop, detection-to-stop ≤ 100ms
 - Teleoperation latency p95 ≤ 150ms, availability ≥ 0.97
 
@@ -171,16 +162,7 @@ The S2AF framework has been applied to two comprehensive case studies demonstrat
    - Validate parametric constraints
    - Verify SLA compliance
    - Conduct quality gate reviews
-
-## Key Benefits
-
-- **Systematic completeness**: Grid structure ensures no architectural aspect is overlooked
-- **Stakeholder alignment**: Domain-based organization speaks to different stakeholder concerns
-- **Traceability**: Explicit links from strategy through implementation to project delivery
-- **Verification**: Parametric constraints enable quantitative verification
-- **Reusability**: Type library and patterns accelerate new project development
-- **Standards compliance**: Built-in support for industry standards and regulations
-
+ 
 ## Contributing
 
 This framework is under active development. Case studies demonstrate application patterns and best practices. Contributions of additional case studies, tooling improvements, and documentation enhancements are welcome.
